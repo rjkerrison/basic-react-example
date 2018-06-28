@@ -1,0 +1,23 @@
+{
+  "name": "react-basic",
+  "version": "1.0.0",
+  "description": "react basics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin James Kerrison",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-es2015": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-loader": "^8.0.0-beta.0",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8"
+  }
+}
