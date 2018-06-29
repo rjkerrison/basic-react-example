@@ -1,7 +1,7 @@
 {
-  "name": "react-basic",
+  "name": "basic-react-example",
   "version": "1.0.0",
-  "description": "react basics",
+  "description": "A very basic app showing what React can do, using webpack and npm.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,18 @@
     "babel-loader": "^8.0.0-beta.0",
     "webpack": "^4.12.2",
     "webpack-cli": "^3.0.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rjkerrison/basic-react-example.git"
+  },
+  "keywords": [
+    "react",
+    "example",
+    "basic"
+  ],
+  "bugs": {
+    "url": "https://github.com/rjkerrison/basic-react-example/issues"
+  },
+  "homepage": "https://github.com/rjkerrison/basic-react-example#readme"
 }
