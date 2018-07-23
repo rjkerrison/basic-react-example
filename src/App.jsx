@@ -9,14 +9,12 @@ class App extends React.Component {
         <div>
           <Link to='/'>Home</Link>
           <Link to='/rabbits'>Rabbits</Link>
+          <Link to='/duck'>Ducks</Link>
         </div>
         <div>
-          <Route to='/'>
-            <BobButton />
-          </Route>
-          <Route to='/rabbits'>
-            <Rabbits {...this.props} />
-          </Route>
+          <Route path='/' exact component={BobButton} />
+          <Route path='/rabbits' component={Rabbits} />
+          <Route path='/duck' component={Rabbits} />
         </div>
       </div>
     )
