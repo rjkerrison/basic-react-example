@@ -6,32 +6,32 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <Link to='/'>Home</Link>
-          <Link to='/rabbits'>Rabbits</Link>
-          <Link to='/duck'>Ducks</Link>
-        </div>
-        <div>
-          <Route path='/' exact component={BobButton} />
-          <Route path='/rabbits' component={Rabbits} />
-          <Route path='/duck' component={Rabbits} />
-        </div>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/rabbits">Rabbits</Link>
+          <Link to="/duck">Ducks</Link>
+        </nav>
+        <main>
+          <Route path="/" exact component={RobinButton} />
+          <Route path="/rabbits" component={Rabbits} />
+          <Route path="/duck" component={Ducks} />
+        </main>
       </div>
     )
   }
 }
 
-class BobButton extends React.Component {
+class RobinButton extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      text: 'Hello world!'
+      text: 'Hello world!',
     }
   }
 
-  changeTheTextToBob() {
+  changeTheTextToRobin() {
     this.setState({
-      text: 'Bob'
+      text: 'Hello Robin!',
     })
   }
 
@@ -39,7 +39,9 @@ class BobButton extends React.Component {
     return (
       <div>
         <p>{this.state.text}</p>
-        <button onClick={this.changeTheTextToBob.bind(this)}>Change the text to Bob</button>
+        <button onClick={this.changeTheTextToRobin.bind(this)}>
+          Change the text to Robin
+        </button>
       </div>
     )
   }
@@ -48,8 +50,8 @@ class BobButton extends React.Component {
 class Rabbits extends React.Component {
   render() {
     return (
-      <div>
-        <Image titleOfTheImage='{this.state.text}' />
+      <div class="my-grid">
+        <Image titleOfTheImage="{this.state.text}" />
         <Image titleOfTheImage="Another rabbit!" />
         <Image titleOfTheImage="A third rabbit!" />
         <Image />
@@ -57,6 +59,26 @@ class Rabbits extends React.Component {
       </div>
     )
   }
+}
+
+const Ducks = () => {
+  const duckSrc =
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Duckling_-_domestic_duck.jpg/170px-Duckling_-_domestic_duck.jpg'
+
+  const duckImages = [
+    { title: '{this.state.text}' },
+    { title: 'A duck!' },
+    { title: 'Another duck!' },
+    { title: null },
+  ]
+  return (
+    <div class="my-flex">
+      {duckImages.map((duck, i) => (
+        <Image key={i} src={duckSrc} titleOfTheImage={duck.title} />
+      ))}
+      <Image titleOfTheImage="A sneaky rabbit." />
+    </div>
+  )
 }
 
 export default App

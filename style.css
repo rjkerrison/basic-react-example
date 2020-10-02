@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+}
+nav a {
+  display: block;
+  padding: 1rem;
+  box-shadow: 0 0 0.25rem rgba(128, 45, 12, 0.8);
+}
+nav a:hover {
+  background-color: rgba(252, 42, 18, 0.2);
+}
+main {
+  padding: 2rem;
+  background-color: rgb(104, 227, 227);
+}
+.my-grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.my-flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+picture > img {
+  max-width: 100%;
+  height: auto;
+}

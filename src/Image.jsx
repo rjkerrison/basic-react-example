@@ -1,9 +1,20 @@
 import React from 'react'
 
 class Image extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      src:
+        props.src ||
+        'https://static.wamiz.fr/images/animaux/rongeurs/medium/lapin.jpg',
+    }
+  }
+
   render() {
     return (
-      <img src="https://static.wamiz.fr/images/animaux/rongeurs/medium/lapin.jpg" title={this.props.titleOfTheImage} />
+      <picture>
+        <img src={this.state.src} title={this.props.titleOfTheImage} />
+      </picture>
     )
   }
 }
