@@ -16,12 +16,11 @@ to install all the node packages.
 
 ## How to
 
-You can generate the built bundle of javascript by running
+You can run the site locally by running
 
 ```sh
-npm run build
+npm start
 ```
 
-This will generate a single file at `./build/bundle.js`.
 If you open `./index.html` in the browser, it will load the script,
 and with it the site itself.
